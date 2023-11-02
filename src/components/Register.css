@@ -1,0 +1,11 @@
+.RteamLogo {
+    color: black;
+}
+
+.RteamLogo img {
+    height: 60px;
+}
+
+.teamLogoBtn {
+    border: none !important;
+}
