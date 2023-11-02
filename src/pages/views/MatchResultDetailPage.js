@@ -211,9 +211,9 @@ function MatchResultDetailPage() {
                                                                 <img src={`https://raw.githubusercontent.com/coreswing/swingimages/main/${teamA[0]['팀명']}/logo.png`}/>
                                                             </div>
                                                             <div className="flex flex-row grid grid-cols-3 px-4">
-                                                                <h3 className="font-semibold">{preRes.pred_score_A}</h3>
+                                                                <h3 className="font-semibold">{parseInt(preRes.pred_score_A)}</h3>
                                                                 <h3 className="font-semibold">:</h3>
-                                                                <h3 className="font-semibold">{preRes.pred_score_B}</h3>
+                                                                <h3 className="font-semibold">{parseInt(preRes.pred_score_B)}</h3>
                                                             </div>
                                                             <img src={`https://raw.githubusercontent.com/coreswing/swingimages/main/${teamB[0]['팀명']}/logo.png`} />
                                                         </div>
