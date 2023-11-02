@@ -123,27 +123,27 @@ function PlayerDetailPage() {
     const hitter_bar_data = [
         {
             name: '안타',
-            리그평균: 60,
+            리그평균: 81.5,
             선수기록: players[0]?.안타,
         },
         {
             name: '홈런',
-            리그평균: 5,
+            리그평균: 15.5,
             선수기록: players[0]?.홈런,
         },
         {
             name: '타점',
-            리그평균: 80,
+            리그평균: 54.5,
             선수기록: players[0]?.타점,
         },
         {
             name: '삼진',
-            리그평균: 80,
+            리그평균: 79,
             선수기록: players[0]?.삼진,
         },
         {
             name: '도루',
-            리그평균: 10,
+            리그평균: 1.5,
             선수기록: players[0]?.도루,
         },
     ];
@@ -151,21 +151,21 @@ function PlayerDetailPage() {
     const pitchers_bar_data = [
         {
             name: 'ERA',
-            리그평균: 5.36,
+            리그평균: 2.225,
             선수기록: players[0]?.ERA,
         },
         {
             name: 'BABIP',
-            리그평균: 0.380,
+            리그평균: 0.307,
             선수기록: players[0]?.BABIP,
         },
         {
             name: '9이닝당볼넷',
-            리그평균: 4.13,
+            리그평균: 2.575,
             선수기록: players[0]['볼넷/9'],
         }, {
             name: '9이닝당삼진',
-            리그평균: 4.13,
+            리그평균: 8.99,
             선수기록: players[0]['삼진/9'],
         },
     ];
