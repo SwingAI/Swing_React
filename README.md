@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Swing AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+머신러닝 기반 프로야구 승부 예측 애플리케이션
 
-## Available Scripts
+## 개발목적
 
-In the project directory, you can run:
+한국 프로야구(KBO)에 대한 정보와 승부 예측 기능을 제공하여 야구를 보다 쉽고 재밌게 접근할 수 있게 하기 위해 제작하였습니다.
 
-### `npm start`
+## 개발내용
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 경기의 정보와 구단 기록, 선수 데이터를 조회하고 분석
+- TensorFlow 기반 프로야구 머신러닝 예측 모델을 활용하여 경기 결과를 예측하고 사용자에게 제공
+- 사용자 승부예측 기능을 활용하여 예측 시스템에 직접적인 참여 유도
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 예상결과
 
-### `npm test`
+- 직접적인 참여를 통해 한국 프로야구에 대한 흥미 유발
+- 구단의 전력 분석에 활용 가능
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 사용된 공개 SW
 
-### `npm run build`
+AWS EC2, TensorFlow, Python, MongoDB, React, Node.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Team.Core
