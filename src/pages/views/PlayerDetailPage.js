@@ -138,27 +138,27 @@ function PlayerDetailPage() {
     const hitter_bar_data = [
         {
             name: '안타',
-            리그평균: 76.5,
+            리그평균: 43.3,
             선수기록: players[0]?.안타,
         },
         {
             name: '홈런',
-            리그평균: 15.5,
+            리그평균: 3,
             선수기록: players[0]?.홈런,
         },
         {
             name: '타점',
-            리그평균: 50.5,
+            리그평균: 20.6,
             선수기록: players[0]?.타점,
         },
         {
             name: '삼진',
-            리그평균: 59,
+            리그평균: 33.5,
             선수기록: players[0]?.삼진,
         },
         {
             name: '도루',
-            리그평균: 1,
+            리그평균: 3.4,
             선수기록: players[0]?.도루,
         },
     ];
@@ -166,21 +166,21 @@ function PlayerDetailPage() {
     const pitchers_bar_data = [
         {
             name: 'ERA',
-            리그평균: 4.555,
+            리그평균: 6.176,
             선수기록: players[0]?.ERA,
         },
         {
             name: 'BABIP',
-            리그평균: 0.306,
+            리그평균: 0.32,
             선수기록: players[0]?.BABIP,
         },
         {
             name: '9이닝당볼넷',
-            리그평균: 3.93,
+            리그평균: 5.846,
             선수기록: players[0]['볼넷/9'],
         }, {
             name: '9이닝당삼진',
-            리그평균: 8.13,
+            리그평균: 6.746,
             선수기록: players[0]['삼진/9'],
         },
     ];
@@ -743,9 +743,9 @@ function PitcherTabs({ players, playerPredict }) {
                         <div className="mt-8 w-2/3">
                             <p className="text-blue-400 text-xl font-semibold mb-2">Swing AI 예상 WAR</p>
                             <div className="flex">
-                                <HorizontalBarChart value={playerPredict.WAR * 15} />
+                                <HorizontalBarChart value={playerPredict?.WAR * 15} />
                                 <p className="text-blue-400 text-xl font-semibold ml-5">{players.map((player) => (
-                                    <p>{Number(playerPredict.WAR).toFixed(2)}</p>
+                                    <p>{Number(playerPredict?.WAR).toFixed(2)}</p>
                                 ))}</p>
                             </div>
                         </div>
@@ -765,9 +765,9 @@ function PitcherTabs({ players, playerPredict }) {
                         <div className="mt-8 w-2/3">
                             <p className="text-blue-400 text-xl font-semibold mb-2">Swing AI 예상 ERA</p>
                             <div className="flex">
-                                <HorizontalBarChart value={playerPredict.ERA * 15} />
+                                <HorizontalBarChart value={playerPredict?.ERA * 15} />
                                 <p className="text-blue-400 text-xl font-semibold ml-5">{players.map((player) => (
-                                    <p>{Number(playerPredict.ERA).toFixed(2)}</p>
+                                    <p>{Number(playerPredict?.ERA).toFixed(2)}</p>
                                 ))}</p>
                             </div>
                         </div>
@@ -787,9 +787,9 @@ function PitcherTabs({ players, playerPredict }) {
                         <div className="mt-8 w-2/3">
                             <p className="text-blue-400 text-xl font-semibold mb-2">Swing AI 예상 탈삼진</p>
                             <div className="flex">
-                                <HorizontalBarChart value={(playerPredict['삼진/9'] / 9 * players[0]['이닝']) / 2} />
+                                <HorizontalBarChart value={(playerPredict?.['삼진/9'] / 9 * players[0]['이닝']) / 2} />
                                 <p className="text-blue-400 text-xl font-semibold ml-5">{players.map((player) => (
-                                    <p>{Math.floor(Number(playerPredict['삼진/9']).toFixed(2) / 9 * player.이닝)}</p>
+                                    <p>{Math.floor(Number(playerPredict?.['삼진/9']).toFixed(2) / 9 * player.이닝)}</p>
                                 ))}</p>
                             </div>
                         </div>
@@ -809,9 +809,9 @@ function PitcherTabs({ players, playerPredict }) {
                         <div className="mt-8 w-2/3">
                             <p className="text-blue-400 text-xl font-semibold mb-2">Swing AI 예상 볼넷</p>
                             <div className="flex">
-                                <HorizontalBarChart value={(playerPredict['볼넷/9'] / 9 * players[0]['이닝']) / 2} />
+                                <HorizontalBarChart value={(playerPredict?.['볼넷/9'] / 9 * players[0]['이닝']) / 2} />
                                 <p className="text-blue-400 text-xl font-semibold ml-5">{players.map((player) => (
-                                    <p>{Math.floor(Number(playerPredict['볼넷/9']).toFixed(2) / 9 * player.이닝)}</p>
+                                    <p>{Math.floor(Number(playerPredict?.['볼넷/9']).toFixed(2) / 9 * player.이닝)}</p>
                                 ))}</p>
                             </div>
                         </div>
@@ -831,9 +831,9 @@ function PitcherTabs({ players, playerPredict }) {
                         <div className="mt-8 w-2/3">
                             <p className="text-blue-400 text-xl font-semibold mb-2">Swing AI 예상 승리</p>
                             <div className="flex">
-                                <HorizontalBarChart value={playerPredict.승 * 5} />
+                                <HorizontalBarChart value={playerPredict?.승 * 5} />
                                 <p className="text-blue-400 text-xl font-semibold ml-5">{players.map((player) => (
-                                    <p>{Math.floor(playerPredict.승)}</p>
+                                    <p>{Math.floor(playerPredict?.승)}</p>
                                 ))}</p>
                             </div>
                         </div>
@@ -853,9 +853,9 @@ function PitcherTabs({ players, playerPredict }) {
                         <div className="mt-8 w-2/3">
                             <p className="text-blue-400 text-xl font-semibold mb-2">Swing AI 예상 패배</p>
                             <div className="flex">
-                                <HorizontalBarChart value={playerPredict.패 * 5} />
+                                <HorizontalBarChart value={playerPredict?.패 * 5} />
                                 <p className="text-blue-400 text-xl font-semibold ml-5">{players.map((player) => (
-                                    <p>{Math.floor(playerPredict.패)}</p>
+                                    <p>{Math.floor(playerPredict?.패)}</p>
                                 ))}</p>
                             </div>
                         </div>
@@ -875,9 +875,9 @@ function PitcherTabs({ players, playerPredict }) {
                         <div className="mt-8 w-2/3">
                             <p className="text-blue-400 text-xl font-semibold mb-2">Swing AI 예상 홀드</p>
                             <div className="flex">
-                                <HorizontalBarChart value={playerPredict.홀드 * 5} />
+                                <HorizontalBarChart value={playerPredict?.홀드 * 5} />
                                 <p className="text-blue-400 text-xl font-semibold ml-5">{players.map((player) => (
-                                    <p>{Math.floor(playerPredict.홀드)}</p>
+                                    <p>{Math.floor(playerPredict?.홀드)}</p>
                                 ))}</p>
                             </div>
                         </div>
@@ -897,9 +897,9 @@ function PitcherTabs({ players, playerPredict }) {
                         <div className="mt-8 w-2/3">
                             <p className="text-blue-400 text-xl font-semibold mb-2">Swing AI 예상 세이브</p>
                             <div className="flex">
-                                <HorizontalBarChart value={playerPredict.세 * 5} />
+                                <HorizontalBarChart value={playerPredict?.세 * 5} />
                                 <p className="text-blue-400 text-xl font-semibold ml-5">{players.map((player) => (
-                                    <p>{Math.floor(playerPredict.세)}</p>
+                                    <p>{Math.floor(playerPredict?.세)}</p>
                                 ))}</p>
                             </div>
                         </div>
