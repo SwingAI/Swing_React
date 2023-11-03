@@ -86,33 +86,33 @@ function ComparePitcher() {
     const data = [
         {
             subject: "행운",
-            "A": players[selectedPlayerId1 - 287]?.BABIP * 300,
-            "B": players[selectedPlayerId2 - 287]?.BABIP * 300,
+            "A": players[selectedPlayerId1 - 300]?.BABIP * 300,
+            "B": players[selectedPlayerId2 - 300]?.BABIP * 300,
         },
         {
             subject: "탈삼진",
-            "A":  players[selectedPlayerId1 - 287]?.['삼진/9'] * 14,
-            "B":  players[selectedPlayerId2 - 287]?.['삼진/9'] * 14,
+            "A":  players[selectedPlayerId1 - 300]?.['삼진/9'] * 14,
+            "B":  players[selectedPlayerId2 - 300]?.['삼진/9'] * 14,
         },
         {
             subject: "제구력",
-            "A": 1 / (players[selectedPlayerId1 - 287]?.['볼넷/9'] ) * 200,
-            "B": 1 / (players[selectedPlayerId2 - 287]?.['볼넷/9'] ) * 200, 
+            "A": 1 / (players[selectedPlayerId1 - 300]?.['볼넷/9'] ) * 200,
+            "B": 1 / (players[selectedPlayerId2 - 300]?.['볼넷/9'] ) * 200, 
         },
         {
             subject: "스태미너",
-            "A": players[selectedPlayerId1 - 287]?.이닝-30,
-            "B": players[selectedPlayerId2 - 287]?.이닝-30,
+            "A": players[selectedPlayerId1 - 300]?.이닝-30,
+            "B": players[selectedPlayerId2 - 300]?.이닝-30,
         },
         {
             subject: "위기관리",
-            "A":  players[selectedPlayerId1 - 287]?.['LOB%'] ,
-            "B":  players[selectedPlayerId2 - 287]?.['LOB%'] ,
+            "A":  players[selectedPlayerId1 - 300]?.['LOB%'] ,
+            "B":  players[selectedPlayerId2 - 300]?.['LOB%'] ,
         },
         {
             subject: "장타 면역",
-            "A": 1 / (players[selectedPlayerId1 - 287]?.['홈런/9']) * 30,
-            "B": 1 / (players[selectedPlayerId2 - 287]?.['홈런/9']) * 30,
+            "A": 1 / (players[selectedPlayerId1 - 300]?.['홈런/9']) * 30,
+            "B": 1 / (players[selectedPlayerId2 - 300]?.['홈런/9']) * 30,
         },
     ];
 
@@ -123,7 +123,7 @@ function ComparePitcher() {
                     <div className="flex w-full">
                         {/* Left Player Photo */}
                         <div className="w-1/3 p-4 items-center justify-center">
-                            <PlayerInfocard id={selectedPlayerId1} name={players[selectedPlayerId1 - 287]?.선수명} team={players[selectedPlayerId1 - 287]?.팀명} />
+                            <PlayerInfocard id={selectedPlayerId1} name={players[selectedPlayerId1 - 300]?.선수명} team={players[selectedPlayerId1 - 300]?.팀명} />
                             {/* Select box for left team */}
                             <select
                                 className="mt-2 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -154,14 +154,14 @@ function ComparePitcher() {
                         <div className="justify center w-2/3 p-4">
                             <div className="h-96">
                                 {/* <CompareGraph data={data} /> */}
-                                <HexaRadarChart data={data} player1={players[selectedPlayerId1 - 287]?.선수명} player2={players[selectedPlayerId2 - 287]?.선수명} />
+                                <HexaRadarChart data={data} player1={players[selectedPlayerId1 - 300]?.선수명} player2={players[selectedPlayerId2 - 300]?.선수명} />
                             </div>
                         </div>
 
 
                         {/* Right Player Photo */}
                         <div className="w-1/3 p-4 items-center justify-center">
-                            <PlayerInfocard id={selectedPlayerId2} name={players[selectedPlayerId2 - 287]?.선수명} team={players[selectedPlayerId2 - 287]?.팀명} />
+                            <PlayerInfocard id={selectedPlayerId2} name={players[selectedPlayerId2 - 300]?.선수명} team={players[selectedPlayerId2 - 300]?.팀명} />
                             {/* Select box for right team */}
                             <select
                                 className="mt-2 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -191,15 +191,15 @@ function ComparePitcher() {
                     <div className="bg-gray-900 rounded-lg p-4">
                         <p className="text-white text-xl font-semibold mb-2">WAR</p>
                         <p className="text-3xl text-blue-600">
-                            {players[selectedPlayerId1 - 287]?.WAR}
+                            {players[selectedPlayerId1 - 300]?.WAR}
                         </p>
                     </div>
-                    <HorizontalBarChart value={players[selectedPlayerId1 - 287]?.WAR * 10} />
-                    <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 287]?.WAR * 10)} />
+                    <HorizontalBarChart value={players[selectedPlayerId1 - 300]?.WAR * 10} />
+                    <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 300]?.WAR * 10)} />
                     <div className="bg-gray-900 rounded-lg p-4">
                         <p className="text-white text-xl font-semibold mb-2">WAR</p>
                         <p className="text-3xl text-blue-600">
-                            {players[selectedPlayerId2 - 287]?.WAR}
+                            {players[selectedPlayerId2 - 300]?.WAR}
                         </p>
                     </div>
                 </div>
@@ -207,15 +207,15 @@ function ComparePitcher() {
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">방어율</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId1 - 287]?.ERA}
+                                {players[selectedPlayerId1 - 300]?.ERA}
                             </p>
                         </div>
-                        <HorizontalBarChart value={players[selectedPlayerId1 - 287]?.ERA * 10} />
-                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 287]?.ERA * 10)} />
+                        <HorizontalBarChart value={players[selectedPlayerId1 - 300]?.ERA * 10} />
+                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 300]?.ERA * 10)} />
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">방어율</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId2 - 287]?.ERA}
+                                {players[selectedPlayerId2 - 300]?.ERA}
                             </p>
                         </div>
                     </div>
@@ -223,15 +223,15 @@ function ComparePitcher() {
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">승리</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId1 - 287]?.승}
+                                {players[selectedPlayerId1 - 300]?.승}
                             </p>
                         </div>
-                        <HorizontalBarChart value={players[selectedPlayerId1 - 287]?.승 * 7} />
-                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 287]?.승 * 7)} />
+                        <HorizontalBarChart value={players[selectedPlayerId1 - 300]?.승 * 7} />
+                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 300]?.승 * 7)} />
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">승</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId2 - 287]?.승}
+                                {players[selectedPlayerId2 - 300]?.승}
                             </p>
                         </div>
                     </div>
@@ -239,15 +239,15 @@ function ComparePitcher() {
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">패배</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId1 - 287]?.패}
+                                {players[selectedPlayerId1 - 300]?.패}
                             </p>
                         </div>
-                        <HorizontalBarChart value={players[selectedPlayerId1 - 287]?.패 * 7} />
-                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 287]?.패 * 7)} />
+                        <HorizontalBarChart value={players[selectedPlayerId1 - 300]?.패 * 7} />
+                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 300]?.패 * 7)} />
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">패배</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId2 - 287]?.패}
+                                {players[selectedPlayerId2 - 300]?.패}
                             </p>
                         </div>
                     </div>
@@ -255,15 +255,15 @@ function ComparePitcher() {
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">세이브</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId1 - 287]?.세}
+                                {players[selectedPlayerId1 - 300]?.세}
                             </p>
                         </div>
-                        <HorizontalBarChart value={players[selectedPlayerId1 - 287]?.세 * 5} />
-                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 287]?.세 * 5)} />
+                        <HorizontalBarChart value={players[selectedPlayerId1 - 300]?.세 * 5} />
+                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 300]?.세 * 5)} />
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">세이브</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId2 - 287]?.세}
+                                {players[selectedPlayerId2 - 300]?.세}
                             </p>
                         </div>
                     </div>
@@ -271,15 +271,15 @@ function ComparePitcher() {
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">홀드</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId1 - 287]?.홀드}
+                                {players[selectedPlayerId1 - 300]?.홀드}
                             </p>
                         </div>
-                        <HorizontalBarChart value={players[selectedPlayerId1 - 287]?.홀드 * 5} />
-                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 287]?.홀드 * 5)} />
+                        <HorizontalBarChart value={players[selectedPlayerId1 - 300]?.홀드 * 5} />
+                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 300]?.홀드 * 5)} />
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">홀드</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId2 - 287]?.홀드}
+                                {players[selectedPlayerId2 - 300]?.홀드}
                             </p>
                         </div>
                     </div>
@@ -287,15 +287,15 @@ function ComparePitcher() {
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">삼진/9이닝</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId1 - 287]['삼진/9']}
+                                {players[selectedPlayerId1 - 300]['삼진/9']}
                             </p>
                         </div>
-                        <HorizontalBarChart value={players[selectedPlayerId1 - 287]['삼진/9'] * 9} />
-                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 287]['삼진/9'] * 9)} />
+                        <HorizontalBarChart value={players[selectedPlayerId1 - 300]['삼진/9'] * 9} />
+                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 300]['삼진/9'] * 9)} />
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">삼진/9이닝</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId2 - 287]['삼진/9']}
+                                {players[selectedPlayerId2 - 300]['삼진/9']}
                             </p>
                         </div>
                     </div>
@@ -303,15 +303,15 @@ function ComparePitcher() {
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">볼넷/9이닝</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId1 - 287]['볼넷/9']}
+                                {players[selectedPlayerId1 - 300]['볼넷/9']}
                             </p>
                         </div>
-                        <HorizontalBarChart value={players[selectedPlayerId1 - 287]['볼넷/9'] * 9} />
-                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 287]['볼넷/9'] * 9)} />
+                        <HorizontalBarChart value={players[selectedPlayerId1 - 300]['볼넷/9'] * 9} />
+                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 300]['볼넷/9'] * 9)} />
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">볼넷/9이닝</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId2 - 287]['볼넷/9']}
+                                {players[selectedPlayerId2 - 300]['볼넷/9']}
                             </p>
                         </div>
                     </div>
@@ -319,15 +319,15 @@ function ComparePitcher() {
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">홈런/9이닝</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId1 - 287]['홈런/9']}
+                                {players[selectedPlayerId1 - 300]['홈런/9']}
                             </p>
                         </div>
-                        <HorizontalBarChart value={players[selectedPlayerId1 - 287]['홈런/9'] * 100} />
-                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 287]['홈런/9'] * 100)} />
+                        <HorizontalBarChart value={players[selectedPlayerId1 - 300]['홈런/9'] * 100} />
+                        <HorizontalBarChart2 value={100 - (players[selectedPlayerId2 - 300]['홈런/9'] * 100)} />
                         <div className="bg-gray-900 rounded-lg p-4">
                             <p className="text-white text-xl font-semibold mb-2">홈런/9이닝</p>
                             <p className="text-3xl text-blue-600">
-                                {players[selectedPlayerId2 - 287]['홈런/9']}
+                                {players[selectedPlayerId2 - 300]['홈런/9']}
                             </p>
                         </div>
                     </div>

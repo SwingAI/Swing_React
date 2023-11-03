@@ -89,7 +89,7 @@ function BattervsPitcher() {
         const fetchData = async () => {
             try {
                 // 외부 서버에서 선수 데이터를 가져오는 부분입니다.
-                const response = await axios.get(`${process.env.REACT_APP_DATA_ADDRESS}/compareplayer/${hitters[selectedPlayerId2 - 1]?.선수명.replace(/\*/g, '')}/${pitchers[selectedPlayerId1 - 287]?.선수명.replace(/\*/g, '')}`);
+                const response = await axios.get(`${process.env.REACT_APP_DATA_ADDRESS}/compareplayer/${hitters[selectedPlayerId2 - 1]?.선수명.replace(/\*/g, '')}/${pitchers[selectedPlayerId1 - 300]?.선수명.replace(/\*/g, '')}`);
                 setResults(response.data); // 선수 데이터를 상태에 저장
             } catch (error) {
                 console.error('Error:', error);
@@ -114,7 +114,7 @@ function BattervsPitcher() {
                     <div className="flex w-full justify-between">
                         {/* Left Player Photo */}
                         <div className="w-1/3 p-4 items-center">
-                            <PlayerInfocard id={selectedPlayerId1} name={pitchers[selectedPlayerId1 - 287]?.선수명} team={pitchers[selectedPlayerId1 - 287]?.팀명} />
+                            <PlayerInfocard id={selectedPlayerId1} name={pitchers[selectedPlayerId1 - 300]?.선수명} team={pitchers[selectedPlayerId1 - 300]?.팀명} />
                             {/* Select box for left team */}
                             <select
                                 className="mt-2 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -150,7 +150,7 @@ function BattervsPitcher() {
                             </button>
                         </div>
 
-                        {isModalOpen && <PredictModal hitter={hitters[selectedPlayerId2 - 1]?.선수명.replace(/\*/g, '')} pitcher={pitchers[selectedPlayerId1 - 287]?.선수명.replace(/\*/g, '')} isOpen={isModalOpen} onClose={closeModal} />} {/* 모달 컴포넌트 */}
+                        {isModalOpen && <PredictModal hitter={hitters[selectedPlayerId2 - 1]?.선수명.replace(/\*/g, '')} pitcher={pitchers[selectedPlayerId1 - 300]?.선수명.replace(/\*/g, '')} isOpen={isModalOpen} onClose={closeModal} />} {/* 모달 컴포넌트 */}
 
 
 

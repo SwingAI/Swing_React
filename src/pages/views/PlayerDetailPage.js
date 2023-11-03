@@ -485,8 +485,8 @@ function HitterTabs({ players, playerNew, playerPredict }) {
                         <div className="mt-8 w-2/3">
                             <p className="text-blue-400 text-xl font-semibold mb-2">Swing AI 예상 타율</p>
                             <div className="flex">
-                                <HorizontalBarChart value={playerPredict?.타율 * 200} />
-                                <p className="text-blue-400 text-xl font-semibold ml-5">{Number(playerPredict?.타율).toFixed(3)}</p>
+                                <HorizontalBarChart value={playerPredict?.타율 * 200 * 0.8} />
+                                <p className="text-blue-400 text-xl font-semibold ml-5">{Number(playerPredict?.타율*0.8).toFixed(3)}</p>
                             </div>
                         </div>
                     </div>
